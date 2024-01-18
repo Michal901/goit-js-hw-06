@@ -3,6 +3,9 @@ const subtractBtn = document.querySelector('button[data-action="decrement"]');
 const counterValue = document.getElementById("value");
 let currentValue = 0;
 
+function update() {
+  counterValue.textContent = currentValue;
+}
 function addNumber() {
   currentValue++;
   update();
@@ -10,9 +13,6 @@ function addNumber() {
 function subtractNumber() {
   currentValue--;
   update();
-}
-function update() {
-  counterValue.textContent = currentValue;
 }
 
 addBtn.addEventListener("click", addNumber);
